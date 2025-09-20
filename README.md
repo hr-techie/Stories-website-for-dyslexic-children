@@ -56,7 +56,7 @@ This is a dyslexia-friendly **kids story website** designed to provide an engagi
 
 
 ## Live Website
-[Open Live Website] https://hadiasaqib.github.io/Stories-website-for-dyslexic-children/
+[Open Live Website] https://github.com/HadiaSaqib/Stories-website-for-dyslexic-children/blob/main/home.html
 
 
 
