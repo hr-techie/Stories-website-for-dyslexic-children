@@ -1,0 +1,317 @@
+/* General font for dyslexic-friendly experience */
+body {
+  font-family: 'OpenDyslexic', Arial, sans-serif;
+  margin: 0;
+  padding: clamp(15px, 3vw, 40px);
+  line-height: clamp(1.6, 2vw, 2);
+  letter-spacing: clamp(0.12em, 0.5vw, 0.2em);
+  background: linear-gradient(135deg, #fdf6e3, #f0f8ff); /* soft gradient */
+  color: #333;
+  transition: background 0.5s;
+}
+
+/* ---------------------- */
+/* HEADER                 */
+/* ---------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  padding-left: 1px;
+  gap: 10px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #91d8a9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  backdrop-filter: blur(4px);
+}
+
+.logo img {
+  width: auto;
+  height: 150px;
+}
+
+/* ---------------------- */
+/* WELCOME BOX            */
+/* ---------------------- */
+.welcome {
+  flex: 1 1 30%;
+  margin: 0 30px 0 10px;
+  padding: 5px;
+  text-align: center;
+  background-color: #5dade2; /* softer blue */
+  border-radius: 30px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.welcome h1 {
+  font-size: 1.8em;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.welcome p {
+  font-size: 1.2em;
+  color: #fbb03b;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+.word1, .word2, .word3 {
+  color: #fff;
+}
+
+/* ---------------------- */
+/* NAVIGATION LINKS       */
+/* ---------------------- */
+.nav ul {
+  list-style: none;
+  padding: 0 15px 0 0;
+}
+
+.nav a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #5dade2;
+  padding: 4px 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.nav a:hover {
+  background-color: #fbb03b;
+  color: #000;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  height: 1px;
+  width: 0;
+  background: #5dade2;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 0.8em;
+  color: #fff;
+}
+
+.nav li:nth-child(1) a i { background-color: #fbb03b; }
+.nav li:nth-child(2) a i { background-color: #f15a24; }
+.nav li:nth-child(3) a i { background-color: #ec008c; }
+
+/* ---------------------- */
+/* PAGE CONTAINER         */
+/* ---------------------- */
+.page-container {
+  margin-top: 180px;
+  padding: 20px;
+}
+
+/* ---------------------- */
+/* CONTACT FORM           */
+/* ---------------------- */
+.contact-form-section {
+  max-width: 700px;
+  margin: auto;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.contact-form-section h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 2px solid #91d8a9;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-family: 'OpenDyslexic', Arial, sans-serif;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #5dade2;
+  box-shadow: 0 0 4px #5dade2;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Input + icons layout */
+.input-with-icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.input-with-icons input,
+.input-with-icons textarea,
+.input-with-icons select {
+  flex: 1;
+}
+
+.icon-btn {
+  background: #5dade2;
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.icon-btn:hover {
+  background: #3498db;
+  color: black;
+}
+
+/* ---------------------- */
+/* FORM BUTTONS           */
+/* ---------------------- */
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  background-color: #5dade2;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.btn:hover {
+  background-color: #3498db;
+  transform: translateY(-3px);
+}
+
+.btn.secondary {
+  background-color: #91d8a9;
+}
+
+.btn.secondary:hover {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+/* ---------------------- */
+/* FOOTER                 */
+/* ---------------------- */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 15px;
+  background: #39b54a;
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+}
+
+footer a {
+  color: #fbb03b;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.form-group.checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-group.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between box and text */
+  font-weight: normal; /* keep text lighter */
+}
+
+footer {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 15px;
+  background: #39b54a;
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+}
+
+body {
+  margin: 0;
+  padding-top: clamp(15px, 3vw, 40px); /* sirf top padding for header */
+  font-size: clamp(1.1em, 1.4vw, 1.4em);
+  line-height: clamp(1.6, 2vw, 2);
+  letter-spacing: clamp(0.12em, 0.5vw, 0.2em);
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+@media print {
+  header, footer, nav {
+    display: none; 
+  }
+  body {
+    font-size: 12pt;
+    color: black;
+    background: white;
+  }
+  .contact-form-section {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}

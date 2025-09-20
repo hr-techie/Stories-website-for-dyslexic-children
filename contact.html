@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="assests/images/favicon.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<meta property="og:title" content="TaleUP - Dyslexia Friendly Stories">
+<meta property="og:description" content="A learning website designed for dyslexic kids to enjoy and explore stories.">
+<meta property="og:image" content="assests/images/preview.png">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    crossorigin="anonymous"
+  />
+
+  <!-- Dyslexia-friendly font -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-dyslexic@0.0.3/open-dyslexic.min.css">
+
+  <title>Contact Us - TaleUP</title>
+  <meta name="description" content="Get in touch with TaleUP, a learning website designed for dyslexic kids to enjoy and explore stories.">
+
+  <link rel="stylesheet" href="assests/css/style3.css">
+</head>
+
+<body>
+<header>
+  <div class="logo">
+    <img src="assests/images/logo.png" alt="TaleUP Logo" loading="lazy">
+  </div>
+
+  <div class="welcome">
+    <h1>Welcome To TaleUP</h1>
+    <p>
+      <span class="word1">Listen,</span>
+      <span class="word2">Read,</span>
+      <span class="word3">and Enjoy Stories</span>
+    </p>
+  </div>
+
+  <div class="nav">
+    <nav aria-label="Main navigation" role="navigation">
+      <ul>
+        <li><a href="home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li><a href="contact.html" aria-current="page"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-container">
+  <main role="main">
+    <section class="contact-form-section">
+      <h2>Contact Us</h2>
+      <p>If you have questions, feedback, or ideas, please fill out the form below.</p>
+
+      <form action="#" method="post">
+
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <div class="input-with-icons">
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+            <button type="button" class="icon-btn" onclick="speakText('Enter your full name')">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <div class="input-with-icons">
+            <input type="email" id="email" name="email" required placeholder="example@email.com">
+            <button type="button" class="icon-btn" onclick="speakText('Enter your email address')">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Age -->
+        <div class="form-group">
+          <label for="age">Your Age:</label>
+          <div class="input-with-icons">
+            <input type="number" id="age" name="age" min="5" max="100" required placeholder="Enter your age">
+            <button type="button" class="icon-btn" onclick="speakText('Enter your age')">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Favorite Color -->
+        <div class="form-group">
+          <label for="color">Pick Your Favorite Color:</label>
+          <div class="input-with-icons">
+            <input type="color" id="color" name="color" value="#29ABE2">
+            <button type="button" class="icon-btn" onclick="speakText('Pick your favorite color')">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Reading Range -->
+        <div class="form-group">
+          <label for="range">How much do you enjoy reading? (1–10):</label>
+          <div class="input-with-icons">
+            <input type="range" id="range" name="range" min="1" max="10">
+            <button type="button" class="icon-btn" onclick="speakText('How much do you enjoy reading from one to ten')">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Comments -->
+        <div class="form-group">
+          <label for="comments">Your Comments:</label>
+          <div class="input-with-icons">
+            <textarea id="comments" name="comments" rows="5" placeholder="Write your suggestions or improvements..."></textarea>
+            <button type="button" class="icon-btn" onclick="speakText('Write your comments or suggestions')">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-group checkbox">
+          <label>
+            <input type="checkbox" id="updates" name="updates">
+            Subscribe to our updates
+          </label>
+        </div>
+
+        <!-- Buttons -->
+        <div class="form-buttons">
+          <button type="submit" class="btn">Submit</button>
+          <button type="reset" class="btn secondary">Reset</button>
+        </div>
+      </form>
+
+      <p><a href="brochure.pdf" download>📥 Download Brochure</a></p>
+    </section>
+  </main>
+
+
+</div>
+
+<!-- JS for Read-Aloud -->
+<script>
+function speakText(text) {
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "en-US";
+    window.speechSynthesis.speak(utterance);
+  } else {
+    alert("Sorry, your browser does not support text-to-speech.");
+  }
+}
+</script>
+
+<!-- Bootstrap Card Section -->
+<div class="card text-center shadow-lg border-0 mx-auto my-2" style="max-width: 600px;">
+  <div class="card-body p-4">
+    <h5 class="card-title text-primary">Accessibility First</h5>
+    <p class="card-text">
+      Our goal is to make the web easier to use for everyone.
+    </p>
+    <a href="about.html" class="btn btn-primary btn-lg">About Us</a>
+    <p class="mt-2 text-muted">Learn more about our website</p>
+  </div>
+</div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Tale Up. All rights reserved.</p>
+      <p>Email: <a href="mailto:info@taleup.pk">info@TaleUP.pk</a> | 
+         Phone: <a href="tel:+923001234567">+92 300 1234567</a></p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
